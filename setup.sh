@@ -6,8 +6,8 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd $SCRIPT_DIR
 
 # To get a nerd font run:
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
-mkdir -p ~/.fonts/JetBrainsMonoNerdFont && unzip JetBrainsMono.zip -d ~/.font/JetBrainsMonoNerdFont
+[ ! -f JetBrainsMono.zip ] && wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+mkdir -p ~/.fonts/JetBrainsMonoNerdFont && unzip JetBrainsMono.zip -d ~/.fonts/JetBrainsMonoNerdFont
 rm JetBrainsMono.zip
 
 #Installs starship
