@@ -1,0 +1,52 @@
+# Disable the package module, hiding it from the prompt completely
+#[package]
+#disabled = true
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format="""
+$time\
+$conda\
+$username\
+$hostname
+$directory\
+$git_status\
+$character
+"""
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+[character]
+success_symbol = "[❯](bold green)"
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "on [$hostname](bold red) "
+disabled = false
+
+[directory]
+truncation_length = 6
+truncation_symbol = "…/"
+
+[conda]
+format = "[$symbol$environment ](dimmed green)   "
+truncation_length = 1
+
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+
+[time]
+disabled = false
+format = '🕙[\[ $time \]]($style) '
+time_format = "%T"
