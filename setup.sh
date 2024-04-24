@@ -14,9 +14,10 @@ rm JetBrainsMono.zip
 curl -sS https://starship.rs/install.sh | sh
 
 # Set the history and shopt bash files
-mv history.sh $HOME/.config/history.sh
-mv shopt.sh $HOME/.config/shopt.sh
-mv starship.toml $HOME/.config/starship.toml
+mv history.sh $HOME/.config/
+mv shopt.sh $HOME/.config/
+mv starship.toml $HOME/.config/
+mv .gitconfig $HOME/.config/
 cat $SCRIPT_DIR/.bashrc >> ~/.bashrc
 
 source ~/.bashrc
