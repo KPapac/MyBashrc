@@ -4,6 +4,9 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd $SCRIPT_DIR
 
+# Make sure $HOME/.config exists
+[ ! -d $HOME/.config/ ] && mkdir $HOME/.config/
+
 # To get a nerd font run:
 [ ! -f JetBrainsMono.zip ] && wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
 mkdir -p ~/.fonts/JetBrainsMonoNerdFont && unzip JetBrainsMono.zip -d ~/.fonts/JetBrainsMonoNerdFont
